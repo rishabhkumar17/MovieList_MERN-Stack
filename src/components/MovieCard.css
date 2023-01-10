@@ -1,0 +1,32 @@
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.movie-poster {
+}
+
+img {
+  width: 70px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.movie-detail {
+  display: inline-block;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  img {
+    width: 150px;
+    height: 200px;
+  }
+}
