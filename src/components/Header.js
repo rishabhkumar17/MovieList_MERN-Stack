@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 import { useState } from 'react';
 import './Header.css';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -21,11 +21,20 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const history = useNavigate();
   return (
     <Box className="header">
-      <Box className="header-title">Movies List</Box>
+      <Box className="header-title">
+        <Button
+          variant="text"
+          className="company-info"
+          onClick={() => history('/movies')}
+        >
+          Movies List
+        </Button>
+      </Box>
       <Box display="flex" sx={{ alignItems: 'center' }}>
-        <Button className="company-info" variant="ctext" onClick={handleOpen}>
+        <Button className="company-info" variant="text" onClick={handleOpen}>
           Company info
         </Button>
         <MoreVertIcon />

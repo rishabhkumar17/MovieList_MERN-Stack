@@ -4,7 +4,6 @@ import { config } from '../App';
 import { useEffect, useState } from 'react';
 import './RegisteredUsers.css';
 import UserData from './UserData';
-import { Update } from '@mui/icons-material';
 
 const RegisteredUsers = () => {
   const [userData, setUserData] = useState([]);
