@@ -1,5 +1,6 @@
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
 import {
+  Button,
   Card,
   CardActionArea,
   CardContent,
@@ -17,17 +18,17 @@ const MovieCard = ({ movie }) => {
         marginTop: '1%',
       }}
     >
-      <CardActionArea sx={{ display: 'flex' }}>
-        <CardContent>
-          <ArrowDropUp sx={{ fontSize: 60 }} />
-          <Typography>{movie.voted.length}</Typography>
-          <ArrowDropDown sx={{ fontSize: 60 }} />
-        </CardContent>
-        <Box className="movie-poster">
-          <img src={movie.poster} alt="poster" />
-        </Box>
-        <CardContent>
-          <div className="movie-detail">
+      <Box style={{ padding: '0.5rem' }}>
+        <CardActionArea sx={{ display: 'flex' }}>
+          <CardContent>
+            <ArrowDropUp sx={{ fontSize: 60 }} />
+            <Typography>{movie.voted.length}</Typography>
+            <ArrowDropDown sx={{ fontSize: 60 }} />
+          </CardContent>
+          <Box className="movie-poster">
+            <img src={movie.poster} alt="poster" />
+          </Box>
+          <CardContent className="movie-detail">
             <Typography variant="h5" color="#212121">
               {movie.title}
             </Typography>
@@ -38,9 +39,12 @@ const MovieCard = ({ movie }) => {
             <Typography>
               {movie.pageViews} views | Voted by {movie.voted.length} People
             </Typography>
-          </div>
-        </CardContent>
-      </CardActionArea>
+          </CardContent>
+        </CardActionArea>
+        <Button variant="contained" fullWidth>
+          Watch Trailer
+        </Button>
+      </Box>
     </Card>
   );
 };

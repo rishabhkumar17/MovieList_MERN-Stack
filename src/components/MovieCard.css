@@ -2,16 +2,15 @@
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
-
-.movie-poster {
+  justify-content: flex-end;
+  align-items: center;
 }
 
 img {
-  width: 70px;
-  height: 120px;
+  width: 5rem;
+  height: 8rem;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .movie-detail {
@@ -21,12 +20,12 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
   text-decoration: none;
-  width: 200px;
+  width: 13rem;
 }
 
 @media screen and (min-width: 768px) {
   img {
-    width: 150px;
-    height: 200px;
+    width: 7rem;
+    height: 11rem;
   }
 }

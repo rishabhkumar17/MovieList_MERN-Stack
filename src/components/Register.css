@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .form {
@@ -19,7 +19,7 @@
 }
 
 .title {
-  color: #00a278;
+  color: #651fff;
 }
 
 .secondary-action {
@@ -29,27 +29,27 @@
 .link {
   font-weight: 700;
   text-decoration: none;
-  color: #45c09f;
+  color: #651fff;
 }
 
 .link:focus {
-  color: #00a278;
+  color: #673ab7;
 }
 
 .link:active {
-  color: #45c09f;
+  color: #673ab7;
 }
 
 .link:visited {
-  color: #45c09f;
+  color: #673ab7;
 }
 
 .button {
-  background-color: #00a278 !important;
+  background-color: #651fff !important;
 }
 
 .button:hover {
-  background-color: #00845c !important;
+  background-color: #673ab7 !important;
 }
 
 @media screen and (min-width: 768px) {

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import MovieCard from './MovieCard';
 import './Movies.css';
+import Header from './Header';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -32,6 +33,7 @@ const Movies = () => {
 
   return (
     <div>
+      <Header />
       <Grid container>
         <Grid item className="movie-grid">
           <Grid container marginY="1rem" paddingX="1rem" spacing={2}>

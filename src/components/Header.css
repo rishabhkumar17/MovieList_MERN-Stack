@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 3vh;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  background: #651fff;
+}
+
+.header-title {
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+.company-info {
+  color: #ffffff !important;
+}
+
+.registered-users {
+  color: #ffffff !important;
+  text-decoration: none;
+}
