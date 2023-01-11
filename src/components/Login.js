@@ -24,27 +24,19 @@ const Login = () => {
     return true;
   };
 
-  const persistLogin = (token, username, balance) => {
-    localStorage.setItem('token', token);
-    localStorage.setItem('username', username);
-    localStorage.setItem('balance', balance);
-  };
-
   const login = async () => {
     const isValid = validateInput();
     try {
       if (isValid) {
-        const response = await axios.post(`${config.endpoint}/auth/login`, {
+        const response = await axios.post(`${config.endpoint}/login`, {
           username,
           password,
         });
         if (response.status === 201) {
           console.log(response);
-          const { balance, success, token, username } = response.data;
+          const { success } = response.data;
           if (success) {
-            persistLogin(token, username, balance);
             enqueueSnackbar('Logged in successfully', { variant: 'success' });
-            localStorage.setItem('success', success);
             setUsername('');
             setPassword('');
             history('/movies');

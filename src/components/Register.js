@@ -17,7 +17,7 @@ import axios from 'axios';
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phone, setPhone] = useState('');
   const [profession, setProfession] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -26,14 +26,13 @@ const Register = () => {
 
   const performAPICall = async () => {
     try {
-      let response = await axios.post(config.endpoint + '/auth/register', {
+      let response = await axios.post(config.endpoint + '/register', {
         username,
         password,
         email,
-        phoneNumber,
+        phone,
         profession,
       });
-      console.log(response.data.success);
       return true;
     } catch (error) {
       return false;
@@ -90,6 +89,9 @@ const Register = () => {
         setUsername('');
         setPassword('');
         setConfirmPassword('');
+        setEmail('');
+        setPhone('');
+        setProfession('');
 
         enqueueSnackbar('Successfully registered', { variant: 'success' });
         history('/login');
@@ -138,8 +140,8 @@ const Register = () => {
             variant="outlined"
             name="phoneNumber"
             placeholder="Enter Phone Number"
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            value={phoneNumber}
+            onChange={(e) => setPhone(e.target.value)}
+            value={phone}
             fullWidth
           ></TextField>
           <FormControl variant="outlined" fullWidth>

@@ -48,7 +48,7 @@ const login = (request, response, next) => {
           let token = jwt.sign({ username: user.username }, 'verySecretValue', {
             expiresIn: '1h',
           });
-          response.json({ message: 'Login Successful' });
+          response.status(201).json({ success: true });
         } else {
           response.json({ message: 'Password did not match' });
         }

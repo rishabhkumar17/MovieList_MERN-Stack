@@ -6,7 +6,7 @@ import Movies from './components/Movies';
 import RegisteredUsers from './components/RegisteredUsers';
 
 export const config = {
-  endpoint: `http://localhost:8082/api/v1`,
+  endpoint: `http://localhost:8082/api`,
 };
 
 function App() {

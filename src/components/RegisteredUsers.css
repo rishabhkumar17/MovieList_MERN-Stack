@@ -1,0 +1,70 @@
+.user-container {
+  display: flex;
+  text-align: left;
+}
+
+.user-list {
+  font-size: 16px;
+  width: 100%;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+.table-head {
+  text-align: left;
+  padding: 1rem;
+  height: 45px;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid rgb(235, 233, 233);
+}
+
+.delete-selection-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem 0 2rem;
+}
+
+.delete-selected-button {
+  height: 2rem;
+  padding: 8px;
+  font-size: 16px;
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.delete-selected-button:hover {
+  color: rgb(229, 81, 81);
+  background-color: rgb(243, 235, 235);
+}
+
+@media screen and (max-width: 768px) {
+  .delete-selection-row {
+    flex-direction: column;
+    margin-top: 2rem;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+
+  .user-list {
+    margin: 0 0.5rem 0 0.5rem;
+  }
+
+  td,
+  th {
+    word-break: break-all;
+    font-size: 12px;
+  }
+
+  .delete-selected-button {
+    margin-top: 16px;
+  }
+}
