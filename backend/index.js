@@ -5,6 +5,7 @@ const cors = require('cors');
 dotenv.config();
 
 const userRouter = require('./routes/user.routes');
+const authRouter = require('./routes/auth');
 
 const app = express();
 const PORT = 8082;
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api/users', userRouter);
+app.use('/api', authRouter);
 
 app.listen(PORT, () => {
   console.log(`Server up and running on port ${PORT}`);

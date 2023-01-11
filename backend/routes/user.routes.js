@@ -6,8 +6,10 @@ const {
   createUser,
   updateUser,
   deleteUser,
+  userLogin,
 } = require('../controllers/user.controller');
 
+router.post('/login', userLogin);
 router.post('/', createUser);
 router.get('/', getUsers);
 router.get('/:userId', userDetail);

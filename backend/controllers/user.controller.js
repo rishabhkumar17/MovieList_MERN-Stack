@@ -35,6 +35,18 @@ const createUser = async (request, response) => {
   }
 };
 
+const userLogin = async (request, response) => {
+  console.log(`POST request to "/auth/login" received`);
+  try {
+    const login = await userModel.find({ username: request.data.username });
+    response.status(201).json({
+      success: true,
+    });
+  } catch (error) {
+    response.status(400).send(error);
+  }
+};
+
 const updateUser = async (request, response) => {
   try {
     const updatedUser = await userModel.findByIdAndUpdate(
@@ -63,4 +75,5 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
+  userLogin,
 };
