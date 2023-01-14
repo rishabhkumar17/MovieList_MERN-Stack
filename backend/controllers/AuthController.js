@@ -25,9 +25,7 @@ const register = (request, response, next) => {
         });
       })
       .catch((error) => {
-        response.json({
-          message: 'An error occured',
-        });
+        response.json(error);
       });
   });
 };

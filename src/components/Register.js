@@ -33,7 +33,7 @@ const Register = () => {
         phone,
         profession,
       });
-      if (response) return true;
+      return true;
     } catch (error) {
       return false;
     }
