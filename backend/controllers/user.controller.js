@@ -57,10 +57,23 @@ const deleteUser = async (request, response) => {
   }
 };
 
+const getQuery = async (request, response) => {
+  const query = {
+    fullname: {
+      $regex: request.query.name,
+      $options: 'i',
+    },
+  };
+  await userModel.find(query, function (err, foundAsked) {
+    response.json('hello');
+  });
+};
+
 module.exports = {
   getUsers,
   userDetail,
   createUser,
   updateUser,
   deleteUser,
+  getQuery,
 };

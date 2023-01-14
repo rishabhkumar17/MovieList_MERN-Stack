@@ -7,9 +7,13 @@ import {
   Typography,
 } from '@mui/material';
 import { Box } from '@mui/system';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './MovieCard.css';
 
 const MovieCard = ({ movie }) => {
+  const [voted, setVoted] = useState(movie.voted.length);
+
   return (
     <Card
       className="card"
@@ -20,9 +24,15 @@ const MovieCard = ({ movie }) => {
       <Box style={{ padding: '0.5rem' }}>
         <CardActionArea sx={{ display: 'flex' }}>
           <CardContent>
-            <ArrowDropUp sx={{ fontSize: 60 }} />
-            <Typography>{movie.voted.length}</Typography>
-            <ArrowDropDown sx={{ fontSize: 60 }} />
+            <ArrowDropUp
+              sx={{ fontSize: 60 }}
+              onClick={() => setVoted(voted + 1)}
+            />
+            <Typography>{voted}</Typography>
+            <ArrowDropDown
+              sx={{ fontSize: 60 }}
+              onClick={() => setVoted(voted - 1)}
+            />
           </CardContent>
           <Box className="movie-poster">
             <img src={movie.poster} alt="poster" />
@@ -40,8 +50,8 @@ const MovieCard = ({ movie }) => {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <Button variant="contained" fullWidth>
-          Watch Trailer
+        <Button variant="contained" fullWidth href="https://www.youtube.com/">
+          Watch Here
         </Button>
       </Box>
     </Card>
