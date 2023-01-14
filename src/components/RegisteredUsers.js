@@ -46,6 +46,10 @@ const RegisteredUsers = () => {
     fetchAPI();
   }, []);
 
+  useEffect(() => {
+    fetchAPI();
+  }, [userData]);
+
   return (
     <div>
       <Header />
