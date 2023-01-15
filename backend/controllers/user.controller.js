@@ -57,16 +57,18 @@ const deleteUser = async (request, response) => {
   }
 };
 
-const getQuery = async (request, response) => {
-  const query = {
-    fullname: {
-      $regex: request.query.name,
-      $options: 'i',
-    },
-  };
-  await userModel.find(query, function (err, foundAsked) {
-    response.json('hello');
-  });
+const searchUsers = async (request, response) => {
+  const { title } = request.query;
+  try {
+    const result = await userModel.find({
+      username: { $regex: new RegExp(title), $options: 'i' },
+    });
+    response.json(result);
+  } catch (error) {
+    response
+      .status(500)
+      .json({ message: "Couldn't fetch blog posts. Please try again", error });
+  }
 };
 
 module.exports = {
@@ -75,5 +77,5 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
-  getQuery,
+  searchUsers,
 };

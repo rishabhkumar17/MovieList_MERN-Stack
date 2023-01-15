@@ -10,8 +10,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [isLoader, setLoader] = useState(false);
-  const [upArrow, setUpArrow] = useState('');
-  const [downArrow, setDownArrow] = useState('');
 
   const moviesData = {
     category: 'movies',
