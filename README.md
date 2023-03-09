@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# MERN Stack Coding Exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Create a web application and connect with MongoDB.
 
-## Available Scripts
+2. Create a user signup page using React.js with Name, Password, Email, Phone
+number, Profession (dropdown) and Password. Note: Password should be
+saved in an encrypted format.
 
-In the project directory, you can run:
+3. Send the user registration data to the server by calling API. And show a
+notification after getting a response back from the server.
 
-### `npm start`
+4. Create a login page and use the previously registered credentials to log in.
+Check if the name and password match. If the name and password match, then
+move to the next screen, else show the “Invalid Credentials” message to the
+user.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. Upon successful login, open a new page, call the below API, and present below
+data to the API.
+URL: https://hoblist.com/api/movieList
+Type: POST
+Parameters: category: "movies", language: "english", genre: "all", sort: "voting"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. Add one option in the menu bar, “Company Info” and show the details below
+when the user clicks on that option.
 
-### `npm test`
+7. Add a tab named Registered Users on the home page. When the user clicks on
+this tab, list all the registered users in a table structure by creating an API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+8. Create an API to update registered user data like name, and phone number after
+selecting a record from the above table structure
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+9. In the same way, create an API to delete registered user records.
