@@ -1,4 +1,4 @@
-# MERN Stack Coding Exercise
+# Movie List - MERN Stack
 
 1. Create a web application and connect with MongoDB.
 
